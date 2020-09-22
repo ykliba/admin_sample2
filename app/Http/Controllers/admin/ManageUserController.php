@@ -23,6 +23,6 @@ class ManageUserController extends Controller
     // }
     
     function showUserCreateForm(){ 
-		return view("admin.user_create");
-	}
+		  return view("admin.user_create");
+	  }
 }

@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth.admin']], function () {
 	
 	//管理側トップ
-	Route::get('/admin', 'admin\AdminTopController@show');
+	Route::get('/admin', 'App\Http\Controllers\admin\AdminTopController@show');
 	//ログアウト実行
-	Route::post('/admin/logout', 'admin\AdminLogoutController@logout');
+	Route::post('/admin/logout', 'App\Http\Controllers\admin\AdminLogoutController@logout');
 	//ユーザー一覧
-    Route::get('/admin/user_list', 'admin\ManageUserController@showUserList');
+    Route::get('/admin/user_list', 'App\Http\Controllers\admin\ManageUserController@showUserList');
     //ユーザー登録
 	Route::get('/admin/user/create', 'App\Http\Controllers\admin\ManageUserController@showUserCreateForm');
 	Route::post('/admin/user/create', 'App\Http\Controllers\admin\ManageUserController@create');
