@@ -24,11 +24,11 @@ Route::group(['middleware' => ['auth.admin']], function () {
 	Route::get('/admin/user/create', 'App\Http\Controllers\admin\ManageUserController@showUserCreateForm');
 	Route::post('/admin/user/create', 'App\Http\Controllers\admin\ManageUserController@create');
 	//ユーザー詳細
-	Route::get('/admin/user/{id}', 'admin\ManageUserController@showUserDetail');
+	Route::get('/admin/user/{id}', 'App\Http\Controllers\admin\ManageUserController@showUserDetail');
 
 });
 
-//管理側ログイン
+// 管理側ログイン
 // Route::get('/admin/login', 'admin\AdminLoginController@showLoginform');
 // Route::post('/admin/login', 'admin\AdminLoginController@login');
 
